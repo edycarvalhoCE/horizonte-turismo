@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -7,14 +6,11 @@
     <title>Horizonte Turismo</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-      // Shim necessário para bibliotecas que esperam ambiente Node (como o SDK do Gemini)
-      window.process = { env: { API_KEY: "" } };
-    </script>
     <style>
       body {
         font-family: 'Inter', sans-serif;
       }
+      /* Custom Scrollbar */
       ::-webkit-scrollbar {
         width: 8px;
         height: 8px;
@@ -42,9 +38,10 @@
   }
 }
 </script>
+<link rel="stylesheet" href="/index.css">
 </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+  <script type="module" src="/index.tsx"></script>
+</body>
 </html>

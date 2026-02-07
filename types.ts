@@ -1,20 +1,9 @@
-
 export interface Review {
   id: string;
   userName: string;
   rating: number;
   comment: string;
   date: string;
-}
-
-export interface Customer {
-  id: string;
-  name: string;
-  email: string;
-  phone: string;
-  birthDate: string; // YYYY-MM-DD
-  address?: string;
-  joinedAt: string;
 }
 
 export interface TravelPackage {

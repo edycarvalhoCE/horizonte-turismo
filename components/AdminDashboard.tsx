@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { 
   LayoutDashboard, Package, CalendarDays, Settings, Bell, Search, 
-  TrendingUp, Users, DollarSign, Plus, Trash2, Edit2, Sparkles, CheckCircle, Loader2, XCircle, Mail, Phone, ChevronDown, Filter, Star, Calendar,
+  TrendingUp, Users, DollarSign, Plus, Trash2, Edit2, Sparkles, CheckCircle, Loader2, XCircle, Mail, Phone, ChevronDown, Filter, Star, Calendar, Eye,
   Plane, Bus, Ship, Train, CheckSquare, Square, MinusCircle, PlusCircle
 } from 'lucide-react';
-import { XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
 import { TravelPackage, Booking, ChartData } from '../types';
 import { generatePackageDetails } from '../services/geminiService';
 
@@ -419,7 +419,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ packages, setPac
                 {/* Featured Filter */}
                 <select 
                     value={filterFeatured}
-                    onChange={(e) => setFilterFeatured(e.target.value as 'all' | 'featured' | 'standard')}
+                    onChange={(e) => setFilterFeatured(e.target.value as any)}
                     className="border border-slate-200 rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-cyan-500 bg-white"
                 >
                     <option value="all">Todos os Status</option>
