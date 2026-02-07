@@ -397,7 +397,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ packages, setPac
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     placeholder="Buscar pacotes..." 
-                    className="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-cyan-500 outline-none text-sm"
+                    className="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-cyan-500 outline-none text-sm bg-white text-slate-900"
                   />
                 </div>
                 <button 
@@ -420,7 +420,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ packages, setPac
                 <select 
                     value={filterFeatured}
                     onChange={(e) => setFilterFeatured(e.target.value as 'all' | 'featured' | 'standard')}
-                    className="border border-slate-200 rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-cyan-500 bg-white"
+                    className="border border-slate-200 rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-cyan-500 bg-white text-slate-900"
                 >
                     <option value="all">Todos os Status</option>
                     <option value="featured">Destaques</option>
@@ -435,7 +435,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ packages, setPac
                         placeholder="Min"
                         value={priceRange.min}
                         onChange={(e) => setPriceRange(prev => ({...prev, min: e.target.value}))}
-                        className="w-24 border border-slate-200 rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-cyan-500"
+                        className="w-24 border border-slate-200 rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-cyan-500 bg-white text-slate-900"
                     />
                     <span className="text-slate-400">-</span>
                     <input 
@@ -443,7 +443,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ packages, setPac
                         placeholder="Max"
                         value={priceRange.max}
                         onChange={(e) => setPriceRange(prev => ({...prev, max: e.target.value}))}
-                        className="w-24 border border-slate-200 rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-cyan-500"
+                        className="w-24 border border-slate-200 rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-cyan-500 bg-white text-slate-900"
                     />
                 </div>
 
@@ -733,7 +733,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ packages, setPac
                     type="text" 
                     value={newPackage.title}
                     onChange={(e) => setNewPackage({...newPackage, title: e.target.value})}
-                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-cyan-500 outline-none" 
+                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-cyan-500 outline-none bg-white text-slate-900" 
                   />
                 </div>
                 <div>
@@ -743,7 +743,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ packages, setPac
                     value={newPackage.location}
                     onChange={(e) => setNewPackage({...newPackage, location: e.target.value})}
                     placeholder="Ex: Paris, França"
-                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-cyan-500 outline-none" 
+                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-cyan-500 outline-none bg-white text-slate-900" 
                   />
                 </div>
               </div>
@@ -755,7 +755,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ packages, setPac
                     type="number" 
                     value={newPackage.price}
                     onChange={(e) => setNewPackage({...newPackage, price: Number(e.target.value)})}
-                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-cyan-500 outline-none" 
+                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-cyan-500 outline-none bg-white text-slate-900" 
                   />
                 </div>
                 <div>
@@ -765,7 +765,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ packages, setPac
                     value={newPackage.duration}
                     onChange={(e) => setNewPackage({...newPackage, duration: e.target.value})}
                     placeholder="Ex: 5 dias, 4 noites"
-                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-cyan-500 outline-none" 
+                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-cyan-500 outline-none bg-white text-slate-900" 
                   />
                 </div>
               </div>
@@ -862,7 +862,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ packages, setPac
                       value={datesInput}
                       onChange={(e) => setDatesInput(e.target.value)}
                       placeholder="Ex: 2023-12-15, 2024-01-20 (YYYY-MM-DD separadas por vírgula)"
-                      className="w-full pl-9 pr-3 py-2 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-cyan-500 outline-none" 
+                      className="w-full pl-9 pr-3 py-2 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-cyan-500 outline-none bg-white text-slate-900" 
                     />
                  </div>
                  <p className="text-xs text-slate-400 mt-1">Deixe em branco para permitir qualquer data.</p>
@@ -874,7 +874,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ packages, setPac
                     type="text" 
                     value={newPackage.image}
                     onChange={(e) => setNewPackage({...newPackage, image: e.target.value})}
-                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-cyan-500 outline-none" 
+                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-cyan-500 outline-none bg-white text-slate-900" 
                   />
               </div>
 
@@ -895,7 +895,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ packages, setPac
                   onChange={(e) => setNewPackage({...newPackage, description: e.target.value})}
                   rows={6}
                   placeholder={isGenerating ? "A IA está escrevendo o conteúdo para você..." : "Escreva os detalhes ou use a IA para gerar..."}
-                  className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-cyan-500 outline-none resize-none"
+                  className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-cyan-500 outline-none resize-none bg-white text-slate-900"
                 />
               </div>
             </div>
