@@ -1,7 +1,8 @@
+
 import React, { useState } from 'react';
-import { PublicSite } from './PublicSite';
-import { AdminDashboard } from './AdminDashboard';
-import { TravelPackage, Booking, ChartData, Review, Customer } from './types';
+import { PublicSite } from './PublicSite.tsx';
+import { AdminDashboard } from './AdminDashboard.tsx';
+import { TravelPackage, Booking, ChartData, Review, Customer } from './types.ts';
 import { Monitor, Layout } from 'lucide-react';
 
 const INITIAL_CUSTOMERS: Customer[] = [
@@ -45,10 +46,10 @@ const App: React.FC = () => {
   return (
     <div className="relative">
       <div className="fixed bottom-4 left-4 z-[9999] bg-slate-900 text-white p-1 rounded-full shadow-2xl border border-slate-700 flex items-center gap-1">
-        <button onClick={() => setViewMode('public')} className={`px-4 py-2 rounded-full text-xs font-bold ${viewMode === 'public' ? 'bg-cyan-600' : 'text-slate-400'}`}>
+        <button onClick={() => setViewMode('public')} className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${viewMode === 'public' ? 'bg-cyan-600' : 'text-slate-400 hover:text-white'}`}>
           Site
         </button>
-        <button onClick={() => setViewMode('admin')} className={`px-4 py-2 rounded-full text-xs font-bold ${viewMode === 'admin' ? 'bg-purple-600' : 'text-slate-400'}`}>
+        <button onClick={() => setViewMode('admin')} className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${viewMode === 'admin' ? 'bg-purple-600' : 'text-slate-400 hover:text-white'}`}>
           Admin
         </button>
       </div>
